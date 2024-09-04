@@ -37,6 +37,7 @@ export const metadata: Metadata = {
     title: "Danish Nasarudin",
     description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
   },
+  verification: { google: "-k--s9yl33BJYJASKBV_UuZIVP6qpf4VcyqCsE4mAIo" },
 };
 
 export const viewport: Viewport = {
