@@ -15,7 +15,7 @@ const Navbar = (props: Props) => {
       <Button
         variant={"ghost"}
         asChild
-        className="mobilehover:hover:bg-transparent bg-transparent mobilehover:hover:text-zinc-400"
+        className="mobilehover:hover:bg-transparent bg-transparent mobilehover:hover:text-zinc-400 px-0 md:px-4"
       >
         <TransitionLink
           href={"/"}
@@ -29,7 +29,7 @@ const Navbar = (props: Props) => {
         <SheetTrigger asChild>
           <Button
             variant={"ghost"}
-            className="mobilehover:hover:bg-transparent bg-transparent mobilehover:hover:text-zinc-500 text-zinc-400"
+            className="mobilehover:hover:bg-transparent bg-transparent mobilehover:hover:text-zinc-500 text-zinc-400 px-0 md:px-4"
           >
             Reach Out
           </Button>

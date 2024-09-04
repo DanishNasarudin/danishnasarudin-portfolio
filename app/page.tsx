@@ -44,7 +44,7 @@ export default function Home() {
           >
             Ideal Tech PC
           </Link>
-          , his work touches the important parts of the companies operation both
+          , his work touches the important parts of the company's operation both
           for consumer and internal staff.
         </p>
       </section>
@@ -80,8 +80,8 @@ export default function Home() {
       </section>
       <section className="h-[100px]"></section>
       {/* <section className="text-zinc-400 text-xs">DN. 2024</section> */}
-      <div className="absolute bg-[#262626] w-[40%] aspect-square rounded-full z-[-2] blur-[150px] top-[10%] left-[-10%] pointer-events-none" />
-      <div className="absolute bg-[#262626]/[0.40] w-[65%] aspect-square rounded-full z-[-2] bottom-[10%] blur-[100px] left-[-5%] translate-x-[80%] pointer-events-none" />
+      <div className="absolute bg-[#494949] md:bg-[#262626] w-[40%] aspect-square rounded-full z-[-2] blur-[80px] md:blur-[150px] top-[10%] left-[-10%] pointer-events-none" />
+      <div className="absolute bg-[#494949]/[0.40] md:bg-[#262626]/[0.40] w-[90%] md:w-[65%] aspect-square rounded-full z-[-2] bottom-[10%] blur-[50px] md:blur-[100px] left-[-5%] translate-x-[80%] pointer-events-none" />
     </main>
   );
 }

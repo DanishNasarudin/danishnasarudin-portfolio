@@ -11,7 +11,32 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Danish Nasarudin",
-  description: "A Portfolio by Danish Nasarudin",
+  description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
+  keywords: [
+    "custom website",
+    "full-stack web developer",
+    "web developer",
+    "remote website developer",
+    "customize website",
+  ],
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/images/icon.svg",
+        href: "/images/icon.svg",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/images/icon-dark.svg",
+        href: "/images/icon-dark.svg",
+      },
+    ],
+  },
+  openGraph: {
+    title: "Danish Nasarudin",
+    description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
+  },
 };
 
 export const viewport: Viewport = {
