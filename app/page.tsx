@@ -44,8 +44,8 @@ export default function Home() {
           >
             Ideal Tech PC
           </Link>
-          , his work touches the important parts of the company's operation both
-          for consumer and internal staff.
+          , his work touches the important parts of the company{"'"}s operation
+          both for consumer and internal staff.
         </p>
       </section>
       <ContentSection className="max-w-[1060px] w-full flex flex-col gap-4 md:gap-8 px-4 md:px-10" />
