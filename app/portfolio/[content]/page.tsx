@@ -8,7 +8,7 @@ const WarrantyEntry = ({ params }: { params: { content: string } }) => {
   const data = contentData.filter((item) => item.content === params.content)[0];
   return (
     <main className="relative flex min-h-screen flex-col items-center pb-10 gap-8 md:gap-16 pt-0">
-      <section className="flex flex-col gap-8 max-w-[1060px] w-full py-[100px] px-4 md:px-10">
+      <section className="flex flex-col gap-8 max-w-[1060px] w-full py-[100px] px-4 md:px-10 testing">
         {data.ext_link !== "" && (
           <Button
             variant={"ghost"}
