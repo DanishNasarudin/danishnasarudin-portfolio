@@ -41,6 +41,7 @@ const ContentSection = ({ className }: Props) => {
               desc={content.sub_desc}
               thumbnail={content.thumbnail}
               link={`/portfolio/${content.content}`}
+              ext_link={content.ext_link}
             />
           ))}
         </div>

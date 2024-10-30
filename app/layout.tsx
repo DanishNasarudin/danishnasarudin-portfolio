@@ -1,6 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { Providers } from "@/lib/providers";
 import { cn } from "@/lib/utils";
+import profile from "@/public/profile.jpg";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
@@ -36,6 +38,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Danish Nasarudin",
     description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
+    images: [
+      {
+        url: profile.src,
+        width: 1000,
+        height: 1000,
+        alt: "Danish Nasarudin Profile",
+      },
+    ],
   },
   verification: { google: "-k--s9yl33BJYJASKBV_UuZIVP6qpf4VcyqCsE4mAIo" },
 };
@@ -59,7 +69,7 @@ export default function RootLayout({
           <Navbar />
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
@@ -70,6 +80,7 @@ export default function RootLayout({
           </footer>
         </div>
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );

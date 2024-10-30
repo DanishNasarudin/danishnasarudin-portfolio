@@ -21,7 +21,7 @@ const LogoSection = ({ className }: Props) => {
           <LogoCell src={reactlogo.src} title="React JS" />
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-          <LogoCell src={tslogo.src} title="Typescript" />
+          <LogoCell src={tslogo.src} title="TypeScript" />
           <LogoCell src={msqllogo.src} title="MySQL" />
         </div>
       </div>

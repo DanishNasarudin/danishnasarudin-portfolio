@@ -5,27 +5,6 @@ import LogoSection from "./(sections)/LogoSection";
 export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col items-center pb-10 gap-8 md:gap-16 pt-0">
-      {/* <section className="sticky w-full flex justify-between top-0 pt-10 z-[20] bg-gradient-to-b from-black to-transparent to-100% px-4 md:px-10">
-        <Button
-          variant={"ghost"}
-          asChild
-          className="mobilehover:hover:bg-transparent mobilehover:hover:text-zinc-400"
-        >
-          <Link
-            href={"/"}
-            className="!text-[32px] font-medium underline underline-offset-4"
-          >
-            DN
-          </Link>
-        </Button>
-        <Button
-          variant={"ghost"}
-          className="mobilehover:hover:bg-transparent mobilehover:hover:text-zinc-500 text-zinc-400"
-        >
-          Reach Out
-        </Button>
-      </section> */}
-      {/* <section className="h-[50px]"></section> */}
       <section className="flex flex-col gap-8 max-w-[1060px] w-full py-[100px] px-4 md:px-10">
         <div className="w-full flex justify-end">
           <div className="flex gap-4">
