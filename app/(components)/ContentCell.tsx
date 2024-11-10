@@ -1,4 +1,7 @@
+import { Skeleton } from "@/components/ui/skeleton";
 import TransitionLink from "@/lib/TransitionLink";
+import Image from "next/image";
+import { Suspense } from "react";
 
 type Props = {
   title: string;
@@ -21,11 +24,16 @@ const ContentCell = ({
     <div className="relative bg-white/10 w-full aspect-[3/2] md:aspect-video rounded-md overflow-hidden border-[1px] border-white/15 flex flex-col justify-end p-4 group cursor-pointer">
       <TransitionLink href={link} className="w-full">
         <div className=" bg-gradient-to-t from-transparent from-10%  w-[70%] aspect-[3/2] absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-60%] md:translate-y-[-50%] rounded-md overflow-hidden mobilehover:group-hover:translate-y-[-62%] md:mobilehover:group-hover:translate-y-[-52%] transition-all duration-500">
-          <img
-            src={thumbnail}
-            alt={link}
-            className="gradient-mask-b-[rgba(0,0,0,1.0)_60%]"
-          />
+          <Suspense fallback={<Skeleton className="w-[3926px] h-[2641px]" />}>
+            <Image
+              src={thumbnail}
+              alt={link}
+              className="gradient-mask-b-[rgba(0,0,0,1.0)_60%]"
+              width={3926}
+              height={2641}
+              priority
+            />
+          </Suspense>
         </div>
 
         <div className="flex justify-between text-xs z-[2]">

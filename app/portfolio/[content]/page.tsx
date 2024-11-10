@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { contentData } from "@/lib/data";
+import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
-type Props = {};
+export const generateStaticParams = async () => {
+  return contentData.map((item) => ({
+    content: item.content,
+  }));
+};
 
 const WarrantyEntry = ({ params }: { params: { content: string } }) => {
   const data = contentData.filter((item) => item.content === params.content)[0];
@@ -34,16 +41,20 @@ const WarrantyEntry = ({ params }: { params: { content: string } }) => {
         <p className="text-xl text-zinc-400 max-w-[700px]">{data.desc}</p>
       </section>
       <section className="flex flex-col gap-4 md:gap-8 max-w-[1060px] w-full px-0 md:px-10">
-        {/* <div className="w-full bg-red-400 aspect-video rounded-md"></div>
-        <img src="" alt="" />
-        <div className="w-full bg-red-400 aspect-video rounded-md"></div> */}
         {data.images.map((image, index) => (
-          <img
-            src={image}
-            alt={`img-${index}`}
+          <Suspense
+            fallback={<Skeleton className="w-[3926px] h-[2641px]" />}
             key={index}
-            className="w-full rounded-md"
-          />
+          >
+            <Image
+              src={image}
+              alt={`img-${index}`}
+              className="w-full rounded-md"
+              width={3926}
+              height={2641}
+              priority
+            />
+          </Suspense>
         ))}
       </section>
       <div className="absolute bg-[#494949] md:bg-[#262626] w-[40%] aspect-square rounded-full z-[-2] blur-[80px] md:blur-[150px] top-[10%] right-[-10%] pointer-events-none" />
