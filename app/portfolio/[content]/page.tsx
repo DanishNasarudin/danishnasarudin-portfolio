@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { contentData } from "@/lib/data";
@@ -38,7 +39,29 @@ const WarrantyEntry = ({ params }: { params: { content: string } }) => {
             <div className="bg-zinc-400 w-4 h-4" />
           </div>
         </div>
-        <p className="text-xl text-zinc-400 max-w-[700px]">{data.desc}</p>
+        <div className="flex flex-col gap-4">
+          <p className="text-xl text-zinc-400 max-w-[700px]">{data.desc}</p>
+          {data.stack.length > 0 && (
+            <div className="flex gap-4">
+              {data.stack.map((item: { name: string; src: string }) => (
+                <Badge
+                  key={item.name}
+                  className="flex gap-1 whitespace-nowrap"
+                  variant={"outline"}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.src}
+                    width={16}
+                    height={16}
+                    priority
+                  />
+                  {item.name}
+                </Badge>
+              ))}
+            </div>
+          )}
+        </div>
       </section>
       <section className="flex flex-col gap-4 md:gap-8 max-w-[1060px] w-full px-0 md:px-10">
         {data.images.map((image, index) => (

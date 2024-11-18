@@ -1,15 +1,23 @@
+"use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import TransitionLink from "@/lib/TransitionLink";
 import profile from "@/public/profile.jpg";
-import { InstagramIcon, LinkedinIcon, YoutubeIcon } from "lucide-react";
+import {
+  ChevronLeftIcon,
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  YoutubeIcon,
+} from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import CopyButton from "./CopyButton";
 
-type Props = {};
+const Navbar = () => {
+  const check = usePathname().split("/")[1];
 
-const Navbar = (props: Props) => {
   return (
     <nav className="sticky w-full flex justify-between top-0 pt-10 z-[20] bg-gradient-to-b from-black to-transparent to-100% px-4 md:px-10 ">
       <Button
@@ -21,7 +29,7 @@ const Navbar = (props: Props) => {
           href={"/"}
           className="!text-[32px] font-medium underline underline-offset-4"
         >
-          DN
+          {check === "portfolio" && <ChevronLeftIcon />} DN
         </TransitionLink>
       </Button>
 
@@ -54,6 +62,11 @@ const Navbar = (props: Props) => {
 
             <div className="flex flex-col gap-4 items-center">
               <CopyButton />
+              <Link href={"https://github.com/DanishNasarudin"} target="_blank">
+                <Button variant={"outline"}>
+                  <GithubIcon className="w-4 mr-2" /> Github
+                </Button>
+              </Link>
               <Link
                 href={"https://www.linkedin.com/in/danishnasarudin/"}
                 target="_blank"

@@ -17,6 +17,13 @@ import galleryMock2 from "@/public/Mockups/gallery-2.webp";
 
 import workstationMock1 from "@/public/Mockups/workstation-1.webp";
 import workstationMock2 from "@/public/Mockups/workstation-2.webp";
+
+import nextjslogo from "@/public/Logo/Logo-01.png";
+import reactlogo from "@/public/Logo/Logo-02.png";
+import tslogo from "@/public/Logo/Logo-03.png";
+import msqllogo from "@/public/Logo/Logo-04.png";
+import twlogo from "@/public/Logo/Logo-06.png";
+import cplogo from "@/public/Logo/Logo-08.png";
 export const contentData = [
   {
     content: "warranty-entry",
@@ -31,6 +38,28 @@ export const contentData = [
       warrantyMock3.src,
     ],
     ext_link: "",
+    stack: [
+      {
+        name: "Next JS",
+        src: nextjslogo.src,
+      },
+      {
+        name: "React JS",
+        src: reactlogo.src,
+      },
+      {
+        name: "Typescript",
+        src: tslogo.src,
+      },
+      {
+        name: "MySQL",
+        src: msqllogo.src,
+      },
+      {
+        name: "cPanel",
+        src: cplogo.src,
+      },
+    ],
   },
   {
     content: "pc-builder",
@@ -45,6 +74,28 @@ export const contentData = [
       builderMock4.src,
     ],
     ext_link: "https://build.idealtech.com.my/",
+    stack: [
+      {
+        name: "Next JS",
+        src: nextjslogo.src,
+      },
+      {
+        name: "React JS",
+        src: reactlogo.src,
+      },
+      {
+        name: "Typescript",
+        src: tslogo.src,
+      },
+      {
+        name: "MySQL",
+        src: msqllogo.src,
+      },
+      {
+        name: "cPanel",
+        src: cplogo.src,
+      },
+    ],
   },
   {
     content: "career-single",
@@ -54,6 +105,24 @@ export const contentData = [
     desc: "Used Next JS framework solely to utilize Tailwind CSS and fetched data, GraphQL from Wordpress, to a custom display layout.",
     images: [careerMock1.src, careerMock2.src, careerMock3.src],
     ext_link: "https://career.idealtech.com.my/",
+    stack: [
+      {
+        name: "Next JS",
+        src: nextjslogo.src,
+      },
+      {
+        name: "React JS",
+        src: reactlogo.src,
+      },
+      {
+        name: "Typescript",
+        src: tslogo.src,
+      },
+      {
+        name: "Tailwind CSS",
+        src: twlogo.src,
+      },
+    ],
   },
   {
     content: "gallery-single",
@@ -63,6 +132,24 @@ export const contentData = [
     desc: "Used Next JS framework solely to utilize Tailwind CSS and fetched data, GraphQL from Wordpress, to a custom display layout.",
     images: [galleryMock1.src, galleryMock2.src],
     ext_link: "https://watercool.idealtech.com.my/",
+    stack: [
+      {
+        name: "Next JS",
+        src: nextjslogo.src,
+      },
+      {
+        name: "React JS",
+        src: reactlogo.src,
+      },
+      {
+        name: "Typescript",
+        src: tslogo.src,
+      },
+      {
+        name: "Tailwind CSS",
+        src: twlogo.src,
+      },
+    ],
   },
   {
     content: "workstation-single",
@@ -72,5 +159,15 @@ export const contentData = [
     desc: "Front-end project code by Tailwind CSS, then used Elementor Wordpress to utilize the Tailwind CSS classes.",
     images: [workstationMock1.src, workstationMock2.src],
     ext_link: "https://idealtech.com.my/workstation-pc/",
+    stack: [
+      {
+        name: "HTML",
+        src: nextjslogo.src,
+      },
+      {
+        name: "CSS",
+        src: reactlogo.src,
+      },
+    ],
   },
 ];
