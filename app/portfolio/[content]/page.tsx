@@ -42,7 +42,7 @@ const WarrantyEntry = ({ params }: { params: { content: string } }) => {
         <div className="flex flex-col gap-4">
           <p className="text-xl text-zinc-400 max-w-[700px]">{data.desc}</p>
           {data.stack.length > 0 && (
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap">
               {data.stack.map((item: { name: string; src: string }) => (
                 <Badge
                   key={item.name}
