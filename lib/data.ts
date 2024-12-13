@@ -24,13 +24,14 @@ import tslogo from "@/public/Logo/Logo-03.png";
 import msqllogo from "@/public/Logo/Logo-04.png";
 import twlogo from "@/public/Logo/Logo-06.png";
 import cplogo from "@/public/Logo/Logo-08.png";
+import siologo from "@/public/Logo/Logo-09.png";
 export const contentData = [
   {
     content: "warranty-entry",
     title: "Warranty Data Entry",
-    sub_desc: "Next JS (React), MySQL, cPanel",
+    sub_desc: "Next JS (React), MySQL, WebSocket",
     thumbnail: warrantyMock2.src,
-    desc: "A custom made data entry app for the Company's internal warranty service record. Inspired by Notion, customized to suit the ease of use to enter data on the spot in front of customers.",
+    desc: "A custom made data entry app for the Company's internal warranty service record. Inspired by Notion, customized to suit the ease of use to enter data on the spot in front of customers. Implemented websocket integration for live data changes.",
     images: [
       warrantyMock4.src,
       warrantyMock1.src,
@@ -58,6 +59,10 @@ export const contentData = [
       {
         name: "cPanel",
         src: cplogo.src,
+      },
+      {
+        name: "Socket IO",
+        src: siologo.src,
       },
     ],
   },
