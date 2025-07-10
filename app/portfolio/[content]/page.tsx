@@ -25,7 +25,7 @@ export default async function Page({
           <Link
             href={data.ext_link}
             target="_blank"
-            className="underline-offset-4 underline decoration-foreground/40 mobilehover:hover:decoration-foreground/80 text-foreground/40 text-center transition-all py-4"
+            className="underline-offset-4 underline decoration-foreground/40 mobilehover:hover:decoration-foreground/80 text-foreground/40 text-center transition-all py-4 w-min whitespace-nowrap mx-auto"
           >
             View Live
           </Link>

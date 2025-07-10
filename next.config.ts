@@ -11,6 +11,19 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  headers: async () => [
+    {
+      source: "/:path*",
+      has: [
+        {
+          type: "host",
+          value:
+            "danishnasarudin-portfolio-6mfvlzcw5-danishnasarudins-projects.vercel.app",
+        },
+      ],
+      headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+    },
+  ],
 };
 
 export default nextConfig;

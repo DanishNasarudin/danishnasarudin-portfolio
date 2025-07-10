@@ -13,6 +13,9 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
+  alternates: {
+    canonical: "/",
+  },
   title: "Danish Nasarudin",
   description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
   keywords: [
