@@ -18,14 +18,25 @@ import galleryMock2 from "@/public/Mockups/gallery-2.webp";
 import workstationMock1 from "@/public/Mockups/workstation-1.webp";
 import workstationMock2 from "@/public/Mockups/workstation-2.webp";
 
+import flatganttMock1 from "@/public/Mockups/flatgantt-1.webp";
+import flatganttMock2 from "@/public/Mockups/flatgantt-2.webp";
+import flatganttMock3 from "@/public/Mockups/flatgantt-3.webp";
+import flatganttMock4 from "@/public/Mockups/flatgantt-4.webp";
+
+import nextjsdarklogo from "@/public/Logo/Logo-00.png";
 import nextjslogo from "@/public/Logo/Logo-01.png";
 import reactlogo from "@/public/Logo/Logo-02.png";
 import tslogo from "@/public/Logo/Logo-03.png";
 import msqllogo from "@/public/Logo/Logo-04.png";
+import postgreslogo from "@/public/Logo/Logo-05.png";
 import twlogo from "@/public/Logo/Logo-06.png";
 import cplogo from "@/public/Logo/Logo-08.png";
 import siologo from "@/public/Logo/Logo-09.png";
-import nextjsdarklogo from "@/public/Logo/Logo-10.png";
+import sentrylogo from "@/public/Logo/Logo-10.png";
+import sentrydarklogo from "@/public/Logo/Logo-11.png";
+import stripelogo from "@/public/Logo/Logo-12.png";
+import paypallogo from "@/public/Logo/Logo-13.png";
+import clerklogo from "@/public/Logo/Logo-14.png";
 
 export type Content = {
   content: string;
@@ -42,6 +53,57 @@ export type Content = {
 };
 
 export const contentData: Content[] = [
+  {
+    content: "flat-gantt",
+    title: "FlatGantt (SaaS)",
+    sub_desc: "Next JS(React), PostgreSQL, Stripe",
+    thumbnail: flatganttMock1.src,
+    desc: "A SaaS web application, made for users that require the ability to have flat gantt chart timeline. Equipped with both Stripe and PayPal as payment gateway to support certain methods.",
+    images: [
+      flatganttMock1.src,
+      flatganttMock2.src,
+      flatganttMock3.src,
+      flatganttMock4.src,
+    ],
+    ext_link: "https://www.flatgantt.com",
+    stack: [
+      {
+        name: "Next JS",
+        src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
+      },
+      {
+        name: "React JS",
+        src: reactlogo.src,
+      },
+      {
+        name: "Typescript",
+        src: tslogo.src,
+      },
+      {
+        name: "PostgreSQL",
+        src: postgreslogo.src,
+      },
+      {
+        name: "Clerk Auth",
+        src: clerklogo.src,
+      },
+      {
+        name: "Stripe",
+        src: stripelogo.src,
+      },
+      {
+        name: "PayPal",
+        src: paypallogo.src,
+      },
+      {
+        name: "Sentry",
+        src: {
+          light: sentrylogo.src,
+          dark: sentrydarklogo.src,
+        },
+      },
+    ],
+  },
   {
     content: "warranty-entry",
     title: "Warranty Data Entry",

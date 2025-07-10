@@ -60,8 +60,8 @@ export default function Home() {
       </section>
       <section className="h-[100px]"></section>
       {/* <section className="text-zinc-400 text-xs">DN. 2024</section> */}
-      <div className="absolute bg-white dark:bg-[#494949] md:bg-white md:dark:bg-[#262626] w-[40%] aspect-square rounded-full z-[-2] blur-[80px] md:blur-[150px] top-[10%] left-[-10%] pointer-events-none" />
-      <div className="absolute bg-white/40 dark:bg-[#494949]/40 md:bg-white/40 md:dark:bg-[#262626]/40 w-[90%] md:w-[65%] aspect-square rounded-full z-[-2] bottom-[10%] blur-[50px] md:blur-[100px] left-[-5%] translate-x-[80%] pointer-events-none" />
+      <div className="absolute bg-white dark:bg-zinc-500 md:bg-white md:dark:bg-zinc-600 w-[60%] aspect-square rounded-full z-[-2] blur-[80px] md:blur-[150px] top-[10%] left-[-10%] pointer-events-none" />
+      <div className="absolute bg-white/40 dark:bg-zinc-600/40 md:bg-white/40 md:dark:bg-zinc-700/40 w-[90%] md:w-[65%] aspect-square rounded-full z-[-2] bottom-[10%] blur-[50px] md:blur-[100px] left-[-5%] translate-x-[80%] pointer-events-none" />
       <TransitionEnd />
     </main>
   );

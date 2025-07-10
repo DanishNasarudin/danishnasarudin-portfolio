@@ -39,7 +39,7 @@ export default async function Page({
         <div className="flex flex-col gap-4">
           <p className="text-xl text-zinc-400 max-w-[700px]">{data.desc}</p>
           {data.stack.length > 0 && (
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap max-w-[600px]">
               {data.stack.map((item) => (
                 <Badge
                   key={item.name}
@@ -76,8 +76,8 @@ export default async function Page({
           />
         ))}
       </section>
-      <div className="absolute dark:bg-[#494949] md:dark:bg-[#262626] w-[40%] aspect-square rounded-full z-[-2] blur-[80px] md:blur-[150px] top-[10%] right-[-10%] pointer-events-none" />
-      <div className="absolute dark:bg-[#494949]/[0.40] md:dark:bg-[#262626]/[0.40] w-[90%] md:w-[65%] aspect-square rounded-full z-[-2] bottom-[10%] blur-[50px] md:blur-[100px] left-[-10%] pointer-events-none" />
+      <div className="absolute dark:bg-zinc-600 md:dark:bg-zinc-600 w-[60%] aspect-square rounded-full z-[-2] blur-[80px] md:blur-[150px] top-[10%] right-[-10%] pointer-events-none" />
+      <div className="absolute dark:bg-zinc-600/[0.40] md:dark:bg-zinc-700/[0.40] w-[90%] md:w-[65%] aspect-square rounded-full z-[-2] bottom-[10%] blur-[50px] md:blur-[100px] left-[-10%] pointer-events-none" />
       <TransitionEnd />
     </main>
   );

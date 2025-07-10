@@ -1,3 +1,4 @@
+import nextjsdarklogo from "@/public/Logo/Logo-00.png";
 import nextjslogo from "@/public/Logo/Logo-01.png";
 import reactlogo from "@/public/Logo/Logo-02.png";
 import tslogo from "@/public/Logo/Logo-03.png";
@@ -5,8 +6,7 @@ import msqllogo from "@/public/Logo/Logo-04.png";
 import postgreslogo from "@/public/Logo/Logo-05.png";
 import twlogo from "@/public/Logo/Logo-06.png";
 import cflogo from "@/public/Logo/Logo-07.png";
-import cplogo from "@/public/Logo/Logo-08.png";
-import nextjsdarklogo from "@/public/Logo/Logo-10.png";
+import stripelogo from "@/public/Logo/Logo-12.png";
 import LogoCell from "./logo-cell";
 
 export default function LogoSection({ className }: { className?: string }) {
@@ -32,7 +32,7 @@ export default function LogoSection({ className }: { className?: string }) {
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
           <LogoCell src={cflogo.src} title="CloudFlare" />
-          <LogoCell src={cplogo.src} title="cPanel" />
+          <LogoCell src={stripelogo.src} title="Stripe" />
         </div>
       </div>
     </section>
