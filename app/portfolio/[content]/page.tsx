@@ -24,7 +24,7 @@ export const generateMetadata = async ({
     ...(data && { title: data.title }),
     ...(data && { description: data.desc }),
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${content}`,
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/portfolio/${content}`,
     },
   };
 };
