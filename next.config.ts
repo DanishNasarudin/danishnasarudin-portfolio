@@ -23,6 +23,28 @@ const nextConfig: NextConfig = {
       ],
       headers: [{ key: "X-Robots-Tag", value: "noindex" }],
     },
+    {
+      source: "/:path*",
+      has: [
+        {
+          type: "host",
+          value:
+            "danishnasarudin-portfolio-danishnasarudins-projects.vercel.app",
+        },
+      ],
+      headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+    },
+    {
+      source: "/:path*",
+      has: [
+        {
+          type: "host",
+          value:
+            "danishnasarudin-portfolio-git-main-danishnasarudins-projects.vercel.app",
+        },
+      ],
+      headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+    },
   ],
 };
 
