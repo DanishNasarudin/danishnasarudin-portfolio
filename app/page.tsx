@@ -1,7 +1,12 @@
 import LogoSection from "@/components/custom/logo-section";
 import TransitionEnd from "@/lib/transition-end";
+import { Metadata } from "next";
 import Link from "next/link";
 import ContentSection from "../components/custom/content-section";
+
+export const metadata: Metadata = {
+  description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
+};
 
 export default function Home() {
   return (
