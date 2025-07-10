@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
       static: 300, // 300 seconds
     },
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;

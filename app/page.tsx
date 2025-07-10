@@ -54,8 +54,8 @@ export default function Home() {
           </div>
         </div>
         <p className="text-xl text-zinc-400 max-w-[700px]">
-          If you're looking to hire a developer with additional skillset outside
-          of tech (Project Manager, Creative Lead), please do reach out.
+          If you{`'`}re looking to hire a developer with additional skillset
+          outside of tech (Project Manager, Creative Lead), please do reach out.
         </p>
       </section>
       <section className="h-[100px]"></section>
