@@ -6,6 +6,7 @@ import postgreslogo from "@/public/Logo/Logo-05.png";
 import twlogo from "@/public/Logo/Logo-06.png";
 import cflogo from "@/public/Logo/Logo-07.png";
 import cplogo from "@/public/Logo/Logo-08.png";
+import nextjsdarklogo from "@/public/Logo/Logo-10.png";
 import LogoCell from "./logo-cell";
 
 export default function LogoSection({ className }: { className?: string }) {
@@ -13,7 +14,10 @@ export default function LogoSection({ className }: { className?: string }) {
     <section className={className}>
       <div className="flex gap-4 md:gap-8 w-full justify-center">
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-          <LogoCell src={nextjslogo.src} title="Next JS" />
+          <LogoCell
+            src={{ light: nextjsdarklogo.src, dark: nextjslogo.src }}
+            title="Next JS"
+          />
           <LogoCell src={reactlogo.src} title="React JS" />
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">

@@ -25,7 +25,23 @@ import msqllogo from "@/public/Logo/Logo-04.png";
 import twlogo from "@/public/Logo/Logo-06.png";
 import cplogo from "@/public/Logo/Logo-08.png";
 import siologo from "@/public/Logo/Logo-09.png";
-export const contentData = [
+import nextjsdarklogo from "@/public/Logo/Logo-10.png";
+
+export type Content = {
+  content: string;
+  title: string;
+  sub_desc: string;
+  thumbnail: string;
+  desc: string;
+  images: string[];
+  ext_link: string;
+  stack: {
+    name: string;
+    src: string | { light: string; dark: string };
+  }[];
+};
+
+export const contentData: Content[] = [
   {
     content: "warranty-entry",
     title: "Warranty Data Entry",
@@ -42,7 +58,7 @@ export const contentData = [
     stack: [
       {
         name: "Next JS",
-        src: nextjslogo.src,
+        src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
       },
       {
         name: "React JS",
@@ -82,7 +98,7 @@ export const contentData = [
     stack: [
       {
         name: "Next JS",
-        src: nextjslogo.src,
+        src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
       },
       {
         name: "React JS",
@@ -113,7 +129,7 @@ export const contentData = [
     stack: [
       {
         name: "Next JS",
-        src: nextjslogo.src,
+        src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
       },
       {
         name: "React JS",
@@ -140,7 +156,7 @@ export const contentData = [
     stack: [
       {
         name: "Next JS",
-        src: nextjslogo.src,
+        src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
       },
       {
         name: "React JS",
@@ -167,7 +183,7 @@ export const contentData = [
     stack: [
       {
         name: "HTML",
-        src: nextjslogo.src,
+        src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
       },
       {
         name: "CSS",

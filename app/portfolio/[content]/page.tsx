@@ -2,7 +2,6 @@ import SmartImage from "@/components/custom/smart-image";
 import { Badge } from "@/components/ui/badge";
 import { contentData } from "@/lib/data";
 import TransitionEnd from "@/lib/transition-end";
-import Image from "next/image";
 import Link from "next/link";
 
 export const generateStaticParams = async () => {
@@ -41,18 +40,21 @@ export default async function Page({
           <p className="text-xl text-zinc-400 max-w-[700px]">{data.desc}</p>
           {data.stack.length > 0 && (
             <div className="flex gap-4 flex-wrap">
-              {data.stack.map((item: { name: string; src: string }) => (
+              {data.stack.map((item) => (
                 <Badge
                   key={item.name}
                   className="flex gap-1 whitespace-nowrap"
                   variant={"outline"}
                 >
-                  <Image
-                    src={item.src}
-                    alt={item.src}
+                  <SmartImage
+                    alt={item.name}
                     width={16}
                     height={16}
                     priority
+                    src={typeof item.src !== "object" ? item.src : "/"}
+                    themeSrc={
+                      typeof item.src === "object" ? item.src : undefined
+                    }
                   />
                   {item.name}
                 </Badge>
