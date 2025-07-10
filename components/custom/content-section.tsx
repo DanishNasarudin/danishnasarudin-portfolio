@@ -1,5 +1,5 @@
 import { contentData } from "@/lib/data";
-import ContentCell from "../(components)/ContentCell";
+import ContentCell from "./content-cell";
 
 type Props = {
   className?: string;

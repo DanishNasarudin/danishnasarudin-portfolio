@@ -28,18 +28,13 @@ const TransitionLink = ({
     e.preventDefault();
 
     const body = document.querySelector("body");
+    if (!body) return;
 
-    body?.classList.add("page-transition");
-    // body?.classList.add("loader");
+    body.classList.add("page-transition");
 
     await sleep(200);
 
     router.push(href);
-
-    await sleep(200);
-
-    body?.classList.remove("page-transition");
-    // body?.classList.remove("loader");
   };
 
   return (

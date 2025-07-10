@@ -1,12 +1,18 @@
 "use client";
+import { Toaster } from "@/components/ui/sonner";
 import React from "react";
-
-type Props = {};
+import { ThemeProvider } from "./providers/theme-provider";
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  // React.useEffect(() => {
-  //   document.documentElement.classList.add("dark");
-  // }, []);
-
-  return <>{children}</>;
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      {children}
+      <Toaster richColors />
+    </ThemeProvider>
+  );
 }

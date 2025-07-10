@@ -6,13 +6,9 @@ import postgreslogo from "@/public/Logo/Logo-05.png";
 import twlogo from "@/public/Logo/Logo-06.png";
 import cflogo from "@/public/Logo/Logo-07.png";
 import cplogo from "@/public/Logo/Logo-08.png";
-import LogoCell from "../(components)/LogoCell";
+import LogoCell from "./logo-cell";
 
-type Props = {
-  className?: string;
-};
-
-const LogoSection = ({ className }: Props) => {
+export default function LogoSection({ className }: { className?: string }) {
   return (
     <section className={className}>
       <div className="flex gap-4 md:gap-8 w-full justify-center">
@@ -37,6 +33,4 @@ const LogoSection = ({ className }: Props) => {
       </div>
     </section>
   );
-};
-
-export default LogoSection;
+}
