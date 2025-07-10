@@ -3,12 +3,30 @@ import SmartImage from "@/components/custom/smart-image";
 import { Badge } from "@/components/ui/badge";
 import { contentData } from "@/lib/data";
 import TransitionEnd from "@/lib/transition-end";
+import { Metadata } from "next";
 import Link from "next/link";
 
 export const generateStaticParams = async () => {
   return contentData.map((item) => ({
     content: item.content,
   }));
+};
+
+export const generateMetadata = async ({
+  params,
+}: {
+  params: Promise<{ content: string }>;
+}): Promise<Metadata> => {
+  const { content } = await params;
+  const data = contentData.find((item) => item.content === content);
+
+  return {
+    ...(data && { title: data.title }),
+    ...(data && { description: data.desc }),
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${content}`,
+    },
+  };
 };
 
 export default async function Page({

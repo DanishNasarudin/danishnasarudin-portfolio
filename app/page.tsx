@@ -5,6 +5,12 @@ import Link from "next/link";
 import ContentSection from "../components/custom/content-section";
 
 export const metadata: Metadata = {
+  title: {
+    absolute: "Danish Nasarudin: A Developer Portfolio",
+  },
+  alternates: {
+    canonical: "/",
+  },
   description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
 };
 

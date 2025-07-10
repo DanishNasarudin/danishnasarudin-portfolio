@@ -6,6 +6,8 @@ import profile from "@/public/profile.jpg";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
+import { WebSite, WithContext } from "schema-dts";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,18 +15,11 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  alternates: {
-    canonical: "/",
+  title: {
+    default: "Danish Nasarudin",
+    template: "%s | Danish Nasarudin",
   },
-  title: "Danish Nasarudin",
   description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
-  keywords: [
-    "custom website",
-    "full-stack web developer",
-    "web developer",
-    "remote website developer",
-    "customize website",
-  ],
   icons: {
     icon: [
       {
@@ -112,8 +107,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd: WithContext<WebSite> = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Danish Nasarudin",
+    url: `${baseUrl}`,
+    image: `${baseUrl}/profile.jpg`,
+  };
+
   return (
     <html lang="en">
+      <Script type="application/ld+json">{JSON.stringify(jsonLd)}</Script>
       <body className={cn(inter.className, "relative")}>
         <Providers>
           <div className="overflow-x-hidden h-screen">
