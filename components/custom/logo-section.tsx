@@ -17,22 +17,23 @@ export default function LogoSection({ className }: { className?: string }) {
           <LogoCell
             src={{ light: nextjsdarklogo.src, dark: nextjslogo.src }}
             title="Next JS"
+            index={0}
           />
-          <LogoCell src={reactlogo.src} title="React JS" />
+          <LogoCell src={reactlogo.src} title="React JS" index={1} />
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-          <LogoCell src={tslogo.src} title="TypeScript" />
-          <LogoCell src={msqllogo.src} title="MySQL" />
+          <LogoCell src={tslogo.src} title="TypeScript" index={2} />
+          <LogoCell src={msqllogo.src} title="MySQL" index={3} />
         </div>
       </div>
       <div className="flex gap-4 md:gap-8 w-full justify-center">
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-          <LogoCell src={postgreslogo.src} title="PostgreSQL" />
-          <LogoCell src={twlogo.src} title="Tailwind CSS" />
+          <LogoCell src={postgreslogo.src} title="PostgreSQL" index={0} />
+          <LogoCell src={twlogo.src} title="Tailwind CSS" index={1} />
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-          <LogoCell src={cflogo.src} title="CloudFlare" />
-          <LogoCell src={stripelogo.src} title="Stripe" />
+          <LogoCell src={cflogo.src} title="CloudFlare" index={2} />
+          <LogoCell src={stripelogo.src} title="Stripe" index={3} />
         </div>
       </div>
     </section>

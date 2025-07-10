@@ -37,6 +37,7 @@ import sentrydarklogo from "@/public/Logo/Logo-11.png";
 import stripelogo from "@/public/Logo/Logo-12.png";
 import paypallogo from "@/public/Logo/Logo-13.png";
 import clerklogo from "@/public/Logo/Logo-14.png";
+import htmllogo from "@/public/Logo/Logo-15.png";
 
 export type Content = {
   content: string;
@@ -245,7 +246,7 @@ export const contentData: Content[] = [
     stack: [
       {
         name: "HTML",
-        src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
+        src: htmllogo.src,
       },
       {
         name: "CSS",

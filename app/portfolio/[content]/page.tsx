@@ -1,3 +1,4 @@
+import ContentImage from "@/components/custom/content-image";
 import SmartImage from "@/components/custom/smart-image";
 import { Badge } from "@/components/ui/badge";
 import { contentData } from "@/lib/data";
@@ -65,15 +66,7 @@ export default async function Page({
       </section>
       <section className="flex flex-col gap-4 md:gap-8 max-w-[1060px] w-full px-0 md:px-10">
         {data.images.map((image, index) => (
-          <SmartImage
-            key={index}
-            src={image}
-            alt={`img-${index}`}
-            className="w-full h-auto object-cover rounded-md data-[loaded=false]:bg-foreground/30 data-[loaded=false]:animate-pulse"
-            width={3926}
-            height={2641}
-            priority
-          />
+          <ContentImage key={index} image={image} index={index} />
         ))}
       </section>
       <div className="absolute dark:bg-zinc-600 md:dark:bg-zinc-600 w-[60%] aspect-square rounded-full z-[-2] blur-[80px] md:blur-[150px] top-[10%] right-[-10%] pointer-events-none" />

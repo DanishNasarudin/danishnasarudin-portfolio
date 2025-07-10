@@ -1,4 +1,6 @@
+"use client";
 import { contentData } from "@/lib/data";
+import { motion } from "motion/react";
 import ContentCell from "./content-cell";
 
 type Props = {
@@ -30,13 +32,21 @@ const ContentSection = ({ className }: Props) => {
   return (
     <section className={className}>
       {rows.map((row, indexRow) => (
-        <div
+        <motion.div
+          initial={{ opacity: 0, translateY: 20 }}
+          animate={{
+            opacity: 100,
+            translateY: 0,
+          }}
+          transition={{ type: "tween", restSpeed: 0.5, delay: 0.1 * indexRow }}
+          viewport={{ once: true }}
           key={indexRow}
           className="flex gap-4 md:gap-8 w-full flex-col md:flex-row"
         >
           {row.map((content, index) => (
             <ContentCell
               key={index}
+              index={index}
               title={content.title}
               desc={content.sub_desc}
               thumbnail={content.thumbnail}
@@ -44,7 +54,7 @@ const ContentSection = ({ className }: Props) => {
               ext_link={content.ext_link}
             />
           ))}
-        </div>
+        </motion.div>
       ))}
     </section>
   );

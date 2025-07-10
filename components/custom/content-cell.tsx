@@ -1,4 +1,6 @@
+"use client";
 import TransitionLink from "@/lib/transition-link";
+import { motion } from "motion/react";
 import SmartImage from "./smart-image";
 
 type Props = {
@@ -8,6 +10,7 @@ type Props = {
   details?: string;
   link: string;
   ext_link: string;
+  index: number;
 };
 
 const ContentCell = ({
@@ -17,9 +20,19 @@ const ContentCell = ({
   details,
   link,
   ext_link,
+  index,
 }: Props) => {
   return (
-    <div className="relative bg-foreground/5 w-full aspect-[3/2] rounded-2xl overflow-hidden border-[1px] border-border flex flex-col justify-end p-4 group cursor-pointer">
+    <motion.div
+      initial={{ opacity: 0, translateY: 20 }}
+      animate={{
+        opacity: 100,
+        translateY: 0,
+      }}
+      transition={{ type: "tween", restSpeed: 0.5, delay: 0.1 * index }}
+      viewport={{ once: true }}
+      className="relative bg-foreground/5 w-full aspect-[3/2] rounded-2xl overflow-hidden border-[1px] border-border flex flex-col justify-end p-4 group cursor-pointer"
+    >
       <TransitionLink href={link} className="w-full">
         <div className=" bg-gradient-to-t from-transparent from-10%  w-[70%] aspect-[3/2] absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-60%] md:translate-y-[-50%] rounded-md overflow-hidden mobilehover:group-hover:translate-y-[-62%] md:mobilehover:group-hover:translate-y-[-52%] transition-all duration-500">
           <SmartImage
@@ -58,7 +71,7 @@ const ContentCell = ({
           </button>
         </a>
       )}
-    </div>
+    </motion.div>
   );
 };
 
