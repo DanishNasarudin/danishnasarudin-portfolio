@@ -45,6 +45,16 @@ const nextConfig: NextConfig = {
       ],
       headers: [{ key: "X-Robots-Tag", value: "noindex" }],
     },
+    {
+      source: "/:path*",
+      has: [
+        {
+          type: "host",
+          value: "danishnasarudin.vercel.app",
+        },
+      ],
+      headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+    },
   ],
 };
 

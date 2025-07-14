@@ -20,11 +20,26 @@ export const generateMetadata = async ({
   const { content } = await params;
   const data = contentData.find((item) => item.content === content);
 
+  if (!data) return {};
+
   return {
-    ...(data && { title: data.title }),
-    ...(data && { description: data.desc }),
+    title: `${data.title} | Danish Nasarudin`,
+    description: data.desc,
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/portfolio/${content}`,
+    },
+    openGraph: {
+      siteName: `${data.title} | Danish Nasarudin`,
+      title: `${data.title} | Danish Nasarudin`,
+      description: data.desc,
+      images: [
+        {
+          url: data.thumbnail,
+          width: 3926,
+          height: 2641,
+          alt: `${data.title}`,
+        },
+      ],
     },
   };
 };

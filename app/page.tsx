@@ -1,22 +1,50 @@
 import LogoSection from "@/components/custom/logo-section";
 import TransitionEnd from "@/lib/transition-end";
+import profile from "@/public/profile.jpg";
 import { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
+import { WebSite, WithContext } from "schema-dts";
 import ContentSection from "../components/custom/content-section";
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+
 export const metadata: Metadata = {
-  title: {
-    absolute: "Danish Nasarudin: A Developer Portfolio",
-  },
+  title: "Danish Nasarudin: A Developer Portfolio",
+  description:
+    "A Portfolio by Danish Nasarudin. Full-Stack Web Developer specialised in web systems tailored for businesses.",
   alternates: {
     canonical: "/",
   },
-  description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
+  openGraph: {
+    siteName: "Danish Nasarudin",
+    title: "Danish Nasarudin",
+    description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
+    images: [
+      {
+        url: profile.src,
+        width: 1000,
+        height: 1000,
+        alt: "Danish Nasarudin Profile",
+      },
+    ],
+  },
 };
 
 export default function Home() {
+  const jsonLd: WithContext<WebSite> = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Danish Nasarudin",
+    url: `${baseUrl}`,
+    image: `${baseUrl}/profile.jpg`,
+  };
+
   return (
     <main className="relative flex min-h-screen flex-col items-center pb-10 gap-8 md:gap-16 pt-0">
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {JSON.stringify(jsonLd)}
+      </Script>
       <section className="flex flex-col gap-8 max-w-[1060px] w-full py-[100px] px-4 md:px-10">
         <div className="w-full flex justify-end">
           <div className="flex gap-4 group [&>div]:transition-all">

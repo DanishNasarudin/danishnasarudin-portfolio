@@ -2,12 +2,9 @@ import Navbar from "@/components/custom/navbar";
 import { Toaster } from "@/components/ui/sonner";
 import { Providers } from "@/lib/providers";
 import { cn } from "@/lib/utils";
-import profile from "@/public/profile.jpg";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
-import { WebSite, WithContext } from "schema-dts";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,11 +12,6 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: {
-    default: "Danish Nasarudin",
-    template: "%s | Danish Nasarudin",
-  },
-  description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
   icons: {
     icon: [
       {
@@ -80,19 +72,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  openGraph: {
-    title: "Danish Nasarudin",
-    description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
-    images: [
-      {
-        url: profile.src,
-        width: 1000,
-        height: 1000,
-        alt: "Danish Nasarudin Profile",
-      },
-    ],
-  },
-  verification: { google: "-k--s9yl33BJYJASKBV_UuZIVP6qpf4VcyqCsE4mAIo" },
+  // verification: { google: "-k--s9yl33BJYJASKBV_UuZIVP6qpf4VcyqCsE4mAIo" },
 };
 
 export const viewport: Viewport = {
@@ -107,17 +87,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd: WithContext<WebSite> = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Danish Nasarudin",
-    url: `${baseUrl}`,
-    image: `${baseUrl}/profile.jpg`,
-  };
-
   return (
     <html lang="en">
-      <Script type="application/ld+json">{JSON.stringify(jsonLd)}</Script>
       <body className={cn(inter.className, "relative")}>
         <Providers>
           <div className="overflow-x-hidden h-screen">
