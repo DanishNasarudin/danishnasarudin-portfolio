@@ -7,10 +7,11 @@ import postgreslogo from "@/public/Logo/Logo-05.png";
 import twlogo from "@/public/Logo/Logo-06.png";
 import cflogo from "@/public/Logo/Logo-07.png";
 import cpanellogo from "@/public/Logo/Logo-08.png";
-import socketiologo from "@/public/Logo/Logo-09.png";
 import stripelogo from "@/public/Logo/Logo-12.png";
 import paypallogo from "@/public/Logo/Logo-13.png";
 import clerklogo from "@/public/Logo/Logo-14.png";
+import ollamalogo from "@/public/Logo/Logo-16.png";
+import ollamadarklogo from "@/public/Logo/Logo-17.png";
 import LogoCell from "./logo-cell";
 
 export default function LogoSection({ className }: { className?: string }) {
@@ -44,8 +45,8 @@ export default function LogoSection({ className }: { className?: string }) {
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
           <LogoCell src={clerklogo.src} title="Clerk Auth" index={0} />
           <LogoCell
-            src={socketiologo.src}
-            title="Socket IO (Websocket)"
+            src={{ light: ollamalogo.src, dark: ollamadarklogo.src }}
+            title="Ollama (LLM)"
             index={1}
           />
         </div>

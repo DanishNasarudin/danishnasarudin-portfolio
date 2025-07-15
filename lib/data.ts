@@ -47,6 +47,8 @@ import stripelogo from "@/public/Logo/Logo-12.png";
 import paypallogo from "@/public/Logo/Logo-13.png";
 import clerklogo from "@/public/Logo/Logo-14.png";
 import htmllogo from "@/public/Logo/Logo-15.png";
+import ollamalogo from "@/public/Logo/Logo-16.png";
+import ollamadarklogo from "@/public/Logo/Logo-17.png";
 
 export type Content = {
   content: string;
@@ -158,7 +160,7 @@ export const contentData: Content[] = [
   {
     content: "pc-builder",
     title: "PC Builder Quotation",
-    sub_desc: "Next JS (React), MySQL, cPanel",
+    sub_desc: "Next JS, MySQL, cPanel",
     thumbnail: builderMock1.src,
     desc: "A PC Part Picker with the latest market price list. Dynamically calculate discounts. Generate quotation link, sharable to other users.",
     images: [
@@ -194,7 +196,7 @@ export const contentData: Content[] = [
   {
     content: "photo-gallery",
     title: "Photo Gallery",
-    sub_desc: "Next JS (React), MySQL, cPanel",
+    sub_desc: "Next JS, MySQL, cPanel",
     thumbnail: photostockMock1.src,
     desc: "A photo gallery of all the products made by the company, accessible by the public to preview or search through their desired PC specifications.",
     images: [
@@ -231,7 +233,7 @@ export const contentData: Content[] = [
   {
     content: "dnd-agent",
     title: "DragNDrop Agent Builder",
-    sub_desc: "Next JS (React), PostgeSQL, Vercel",
+    sub_desc: "Next JS, PostgeSQL, Ollama (LLM)",
     thumbnail: dndagentMock1.src,
     desc: "Drag and drop web application made as requested by client, utilised React Flow library, built in 1 week timeframe.",
     images: [dndagentMock1.src, dndagentMock2.src],
@@ -261,12 +263,16 @@ export const contentData: Content[] = [
         name: "Vercel",
         src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
       },
+      {
+        name: "Ollama (LLM)",
+        src: { light: ollamalogo.src, dark: ollamadarklogo.src },
+      },
     ],
   },
   {
     content: "career-single",
     title: "Career Single Page",
-    sub_desc: "Next JS (React), Wordpress CMS, GraphQL",
+    sub_desc: "Next JS, Wordpress CMS, GraphQL",
     thumbnail: careerMock1.src,
     desc: "Used Next JS framework solely to utilize Tailwind CSS and fetched data, GraphQL from Wordpress, to a custom display layout.",
     images: [careerMock1.src, careerMock2.src, careerMock3.src],
@@ -293,7 +299,7 @@ export const contentData: Content[] = [
   {
     content: "gallery-single",
     title: "Gallery Single Page",
-    sub_desc: "Next JS (React), Wordpress CMS, GraphQL",
+    sub_desc: "Next JS, Wordpress CMS, GraphQL",
     thumbnail: galleryMock1.src,
     desc: "Used Next JS framework solely to utilize Tailwind CSS and fetched data, GraphQL from Wordpress, to a custom display layout.",
     images: [galleryMock1.src, galleryMock2.src],
