@@ -67,7 +67,7 @@ export const contentData: Content[] = [
   {
     content: "flat-gantt",
     title: "FlatGantt (SaaS)",
-    sub_desc: "Next JS(React), PostgreSQL, Stripe",
+    sub_desc: "Next JS (React), PostgreSQL, Stripe",
     thumbnail: flatganttMock1.src,
     desc: "A SaaS web application, made for users that require the ability to have flat gantt chart timeline. Equipped with both Stripe and PayPal as payment gateway to support certain methods.",
     images: [
@@ -194,7 +194,7 @@ export const contentData: Content[] = [
   {
     content: "photo-gallery",
     title: "Photo Gallery",
-    sub_desc: "Next Js (React), MySQL, cPanel",
+    sub_desc: "Next JS (React), MySQL, cPanel",
     thumbnail: photostockMock1.src,
     desc: "A photo gallery of all the products made by the company, accessible by the public to preview or search through their desired PC specifications.",
     images: [
@@ -266,7 +266,7 @@ export const contentData: Content[] = [
   {
     content: "career-single",
     title: "Career Single Page",
-    sub_desc: "Next Js (React), Wordpress CMS, GraphQL",
+    sub_desc: "Next JS (React), Wordpress CMS, GraphQL",
     thumbnail: careerMock1.src,
     desc: "Used Next JS framework solely to utilize Tailwind CSS and fetched data, GraphQL from Wordpress, to a custom display layout.",
     images: [careerMock1.src, careerMock2.src, careerMock3.src],
@@ -293,7 +293,7 @@ export const contentData: Content[] = [
   {
     content: "gallery-single",
     title: "Gallery Single Page",
-    sub_desc: "Next Js (React), Wordpress CMS, GraphQL",
+    sub_desc: "Next JS (React), Wordpress CMS, GraphQL",
     thumbnail: galleryMock1.src,
     desc: "Used Next JS framework solely to utilize Tailwind CSS and fetched data, GraphQL from Wordpress, to a custom display layout.",
     images: [galleryMock1.src, galleryMock2.src],
