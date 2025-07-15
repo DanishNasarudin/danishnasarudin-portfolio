@@ -21,6 +21,11 @@ export const metadata: Metadata = {
         type: "image/png",
       },
       {
+        url: new URL("/favicon-16x16.png", baseUrl).toString(),
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
         media: "(prefers-color-scheme: dark)",
         url: new URL("/favicon-16x16-dark.png", baseUrl).toString(),
         sizes: "16x16",
@@ -28,6 +33,11 @@ export const metadata: Metadata = {
       },
       {
         media: "(prefers-color-scheme: light)",
+        url: new URL("/favicon-32x32.png", baseUrl).toString(),
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
         url: new URL("/favicon-32x32.png", baseUrl).toString(),
         sizes: "32x32",
         type: "image/png",
@@ -44,12 +54,20 @@ export const metadata: Metadata = {
         type: "image/x-icon",
       },
       {
+        url: new URL("/favicon.ico", baseUrl).toString(),
+        type: "image/x-icon",
+      },
+      {
         media: "(prefers-color-scheme: dark)",
         url: new URL("/favicon-dark.ico", baseUrl).toString(),
         type: "image/x-icon",
       },
       {
         media: "(prefers-color-scheme: light)",
+        url: new URL("/icon.svg", baseUrl).toString(),
+        type: "image/svg+xml",
+      },
+      {
         url: new URL("/icon.svg", baseUrl).toString(),
         type: "image/svg+xml",
       },
@@ -62,6 +80,10 @@ export const metadata: Metadata = {
     apple: [
       {
         media: "(prefers-color-scheme: light)",
+        url: new URL("/apple-touch-icon.png", baseUrl).toString(),
+        type: "image/png",
+      },
+      {
         url: new URL("/apple-touch-icon.png", baseUrl).toString(),
         type: "image/png",
       },

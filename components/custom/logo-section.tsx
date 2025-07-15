@@ -6,7 +6,11 @@ import msqllogo from "@/public/Logo/Logo-04.png";
 import postgreslogo from "@/public/Logo/Logo-05.png";
 import twlogo from "@/public/Logo/Logo-06.png";
 import cflogo from "@/public/Logo/Logo-07.png";
+import cpanellogo from "@/public/Logo/Logo-08.png";
+import socketiologo from "@/public/Logo/Logo-09.png";
 import stripelogo from "@/public/Logo/Logo-12.png";
+import paypallogo from "@/public/Logo/Logo-13.png";
+import clerklogo from "@/public/Logo/Logo-14.png";
 import LogoCell from "./logo-cell";
 
 export default function LogoSection({ className }: { className?: string }) {
@@ -33,6 +37,20 @@ export default function LogoSection({ className }: { className?: string }) {
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
           <LogoCell src={cflogo.src} title="CloudFlare" index={2} />
+          <LogoCell src={cpanellogo.src} title="cPanel" index={3} />
+        </div>
+      </div>
+      <div className="flex gap-4 md:gap-8 w-full justify-center">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+          <LogoCell src={clerklogo.src} title="Clerk Auth" index={0} />
+          <LogoCell
+            src={socketiologo.src}
+            title="Socket IO (Websocket)"
+            index={1}
+          />
+        </div>
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+          <LogoCell src={paypallogo.src} title="PayPal" index={2} />
           <LogoCell src={stripelogo.src} title="Stripe" index={3} />
         </div>
       </div>

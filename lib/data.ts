@@ -18,10 +18,19 @@ import galleryMock2 from "@/public/Mockups/gallery-2.webp";
 import workstationMock1 from "@/public/Mockups/workstation-1.webp";
 import workstationMock2 from "@/public/Mockups/workstation-2.webp";
 
+import dndagentMock1 from "@/public/Mockups/dnd-agent-1.webp";
+import dndagentMock2 from "@/public/Mockups/dnd-agent-2.webp";
+
 import flatganttMock1 from "@/public/Mockups/flatgantt-1.webp";
 import flatganttMock2 from "@/public/Mockups/flatgantt-2.webp";
 import flatganttMock3 from "@/public/Mockups/flatgantt-3.webp";
 import flatganttMock4 from "@/public/Mockups/flatgantt-4.webp";
+
+import photostockMock1 from "@/public/Mockups/photostock-1.webp";
+import photostockMock2 from "@/public/Mockups/photostock-2.webp";
+import photostockMock3 from "@/public/Mockups/photostock-3.webp";
+import photostockMock4 from "@/public/Mockups/photostock-4.webp";
+import photostockMock5 from "@/public/Mockups/photostock-5.webp";
 
 import nextjsdarklogo from "@/public/Logo/Logo-00.png";
 import nextjslogo from "@/public/Logo/Logo-01.png";
@@ -47,6 +56,7 @@ export type Content = {
   desc: string;
   images: string[];
   ext_link: string;
+  git_link?: string;
   stack: {
     name: string;
     src: string | { light: string; dark: string };
@@ -178,6 +188,78 @@ export const contentData: Content[] = [
       {
         name: "cPanel",
         src: cplogo.src,
+      },
+    ],
+  },
+  {
+    content: "photo-gallery",
+    title: "Photo Gallery",
+    sub_desc: "Next Js (React), MySQL, cPanel",
+    thumbnail: photostockMock1.src,
+    desc: "A photo gallery of all the products made by the company, accessible by the public to preview or search through their desired PC specifications.",
+    images: [
+      photostockMock1.src,
+      photostockMock2.src,
+      photostockMock3.src,
+      photostockMock4.src,
+      photostockMock5.src,
+    ],
+    ext_link: "https://photostock.idealtech.com.my",
+    stack: [
+      {
+        name: "Next JS",
+        src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
+      },
+      {
+        name: "React JS",
+        src: reactlogo.src,
+      },
+      {
+        name: "Typescript",
+        src: tslogo.src,
+      },
+      {
+        name: "MySQL",
+        src: msqllogo.src,
+      },
+      {
+        name: "cPanel",
+        src: cplogo.src,
+      },
+    ],
+  },
+  {
+    content: "dnd-agent",
+    title: "DragNDrop Agent Builder",
+    sub_desc: "Next JS (React), PostgeSQL, Vercel",
+    thumbnail: dndagentMock1.src,
+    desc: "Drag and drop web application made as requested by client, utilised React Flow library, built in 1 week timeframe.",
+    images: [dndagentMock1.src, dndagentMock2.src],
+    ext_link: "https://dnd-ai-builder.vercel.app/",
+    stack: [
+      {
+        name: "Next JS",
+        src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
+      },
+      {
+        name: "React JS",
+        src: reactlogo.src,
+      },
+      {
+        name: "Typescript",
+        src: tslogo.src,
+      },
+      {
+        name: "Tailwind CSS",
+        src: twlogo.src,
+      },
+      {
+        name: "PostgreSQL",
+        src: postgreslogo.src,
+      },
+      {
+        name: "Vercel",
+        src: { light: nextjsdarklogo.src, dark: nextjslogo.src },
       },
     ],
   },
