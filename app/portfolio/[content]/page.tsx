@@ -5,6 +5,10 @@ import { contentData } from "@/lib/data";
 import TransitionEnd from "@/lib/transition-end";
 import { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
+import { Article, WithContext } from "schema-dts";
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 
 export const generateStaticParams = async () => {
   return contentData.map((item) => ({
@@ -26,7 +30,7 @@ export const generateMetadata = async ({
     title: `${data.title} | Danish Nasarudin`,
     description: data.desc,
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/portfolio/${content}`,
+      canonical: `${baseUrl}/portfolio/${content}`,
     },
     openGraph: {
       siteName: `${data.title} | Danish Nasarudin`,
@@ -51,8 +55,32 @@ export default async function Page({
 }) {
   const { content } = await params;
   const data = contentData.filter((item) => item.content === content)[0];
+
+  const jsonLdArticle: WithContext<Article> = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: data.title,
+    image: [...data.images.slice(0, 2)],
+    datePublished: new Date().toISOString(),
+    dateModified: new Date().toISOString(),
+    author: [
+      {
+        "@type": "Person",
+        name: "Danish Nasarudin",
+        identifier: "danish-aiman-nasarudin",
+        image: `${baseUrl}/profile.jpg`,
+        sameAs: [
+          "https://www.linkedin.com/in/danishnasarudin/",
+          "https://www.youtube.com/c/DanishNasarudin",
+        ],
+      },
+    ],
+  };
   return (
     <main className="relative flex min-h-screen flex-col items-center pb-10 gap-8 md:gap-16 pt-0">
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {JSON.stringify(jsonLdArticle)}
+      </Script>
       <section className="flex flex-col gap-8 max-w-[1060px] w-full py-[100px] px-4 md:px-10 testing">
         {data.ext_link !== "" && (
           <Link
