@@ -9,7 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${base}/portfolio/${item.content}`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      images: [...item.images.slice(0, 2)],
+      images: [...item.images.slice(0, 2).map((item) => `${base}${item}`)],
     };
   });
 
