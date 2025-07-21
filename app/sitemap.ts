@@ -1,32 +1,35 @@
+import { contentData } from "@/lib/data";
 import { MetadataRoute } from "next";
 
 const base = process.env.NEXT_PUBLIC_BASE_URL!;
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const dynamicContent: MetadataRoute.Sitemap = contentData.map((item) => {
+    return {
+      url: `${base}/portfolio/${item.content}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      images: [...item.images.slice(0, 2)],
+    };
+  });
+
   return [
     {
       url: base,
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "monthly",
       priority: 1,
     },
+    ...dynamicContent,
     {
-      url: `${base}/portfolio/flat-gantt`,
+      url: `${base}/robots.txt`,
       lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.8,
+      changeFrequency: "monthly",
     },
     {
-      url: `${base}/portfolio/warranty-entry`,
+      url: `${base}/manifest.webmanifest`,
       lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6,
-    },
-    {
-      url: `${base}/portfolio/pc-builder`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.5,
+      changeFrequency: "monthly",
     },
   ];
 }

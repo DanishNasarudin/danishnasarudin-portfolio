@@ -4,7 +4,7 @@ import profile from "@/public/profile.jpg";
 import { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import { WebSite, WithContext } from "schema-dts";
+import { ProfilePage, WebSite, WithContext } from "schema-dts";
 import ContentSection from "../components/custom/content-section";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "Danish Nasarudin",
     title: "Danish Nasarudin",
-    description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
+    description:
+      "A Portfolio by Danish Nasarudin. Full-Stack Web Developer specialised in web systems tailored for businesses.",
     images: [
       {
         url: profile.src,
@@ -34,16 +35,60 @@ export const metadata: Metadata = {
 export default function Home() {
   const jsonLd: WithContext<WebSite> = {
     "@context": "https://schema.org",
+    "@id": `${baseUrl}/#website`,
     "@type": "WebSite",
     name: "Danish Nasarudin",
     url: `${baseUrl}`,
-    image: `${baseUrl}/profile.jpg`,
+  };
+
+  const jsonLdProfile: WithContext<ProfilePage> = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    dateModified: new Date().toISOString(),
+    mainEntity: {
+      "@type": "Person",
+      name: "Danish Nasarudin",
+      identifier: "danish-aiman-nasarudin",
+      description:
+        "Danish Nasarudin is a Full-Stack Web Developer, based in Malaysia. His work touches the important parts of the company's operation both for consumer and internal staff.",
+      jobTitle: "Full-Stack Web Developer",
+      worksFor: {
+        "@type": "Organization",
+        name: "Ideal Tech PC Sdn Bhd",
+        logo: `${baseUrl}/Logo/Logo-18.png`,
+      },
+      url: `${baseUrl}`,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality:
+          "WP. Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+        addressCountry: "N/A",
+      },
+      image: `${baseUrl}/profile.jpg`,
+      sameAs: [
+        "https://www.linkedin.com/in/danishnasarudin/",
+        "https://www.youtube.com/c/DanishNasarudin",
+      ],
+      alumniOf: [
+        {
+          "@type": "EducationalOrganization",
+          name: "Asia Pacific University of Technology and Innovation (APU / APIIT)",
+        },
+        {
+          "@type": "EducationalOrganization",
+          name: "University of Nottingham Malaysia",
+        },
+      ],
+    },
   };
 
   return (
     <main className="relative flex min-h-screen flex-col items-center pb-10 gap-8 md:gap-16 pt-0">
       <Script type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify(jsonLd)}
+      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {JSON.stringify(jsonLdProfile)}
       </Script>
       <section className="flex flex-col gap-8 max-w-[1060px] w-full py-[100px] px-4 md:px-10">
         <div className="w-full flex justify-end">
