@@ -29,7 +29,7 @@ export default function LogoCell({
         className="w-[60%] mobilehover:group-hover:translate-y-[-5%] transition-all duration-500 h-auto object-cover rounded-md data-[loaded=false]:min-w-[100px] data-[loaded=false]:w-full data-[loaded=false]:bg-foreground/30 data-[loaded=false]:animate-pulse"
         width={1000}
         height={1000}
-        priority
+        priority={index < 2}
       />
       <p>{title}</p>
     </motion.div>

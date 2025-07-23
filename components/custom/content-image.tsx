@@ -25,7 +25,7 @@ export default function ContentImage({
         className="w-full h-auto object-cover rounded-md data-[loaded=false]:bg-foreground/30 data-[loaded=false]:animate-pulse"
         width={3926}
         height={2641}
-        priority
+        priority={index < 2}
       />
     </motion.div>
   );
