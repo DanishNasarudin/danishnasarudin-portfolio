@@ -68,8 +68,7 @@ const Navbar = () => {
             <div className="flex flex-col gap-2 items-center">
               <h2 className="font-bold">Danish Nasarudin</h2>
               <p className="text-center w-[70%]">
-                Full-Stack Web Developer, Creative Director, Digital Marketing
-                Lead.
+                Full-Stack Software Engineer
               </p>
             </div>
 

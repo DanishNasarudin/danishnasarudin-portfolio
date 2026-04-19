@@ -10,9 +10,9 @@ import ContentSection from "../components/custom/content-section";
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 
 export const metadata: Metadata = {
-  title: "Danish Nasarudin: A Developer Portfolio",
+  title: "Danish Nasarudin: A Software Engineer's Portfolio",
   description:
-    "A Portfolio by Danish Nasarudin. Full-Stack Web Developer specialised in web systems tailored for businesses.",
+    "A Portfolio by Danish Nasarudin. A Front-End Mobile Engineer specialised in Fintech Payment Product.",
   alternates: {
     canonical: "/",
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Danish Nasarudin",
     title: "Danish Nasarudin",
     description:
-      "A Portfolio by Danish Nasarudin. Full-Stack Web Developer specialised in web systems tailored for businesses.",
+      "A Portfolio by Danish Nasarudin. A Mobile Front-End Engineer specialised in Fintech Payment Product.",
     images: [
       {
         url: profile.src,
@@ -50,12 +50,11 @@ export default function Home() {
       name: "Danish Nasarudin",
       identifier: "danish-aiman-nasarudin",
       description:
-        "Danish Nasarudin is a Full-Stack Web Developer, based in Malaysia. His work touches the important parts of the company's operation both for consumer and internal staff.",
-      jobTitle: "Full-Stack Web Developer",
+        "Danish Nasarudin is a Front-End Mobile Engineer, based in Malaysia. He specialised in the Payment related products within the Fintech industry.",
+      jobTitle: "Front-End Mobile Engineer (Fintech)",
       worksFor: {
         "@type": "Organization",
-        name: "Ideal Tech PC Sdn Bhd",
-        logo: `${baseUrl}/Logo/Logo-18.png`,
+        name: "YTL Digital Bank Berhad (Ryt Bank)",
       },
       url: `${baseUrl}`,
       address: {
@@ -84,10 +83,10 @@ export default function Home() {
 
   return (
     <main className="relative flex min-h-screen flex-col items-center pb-10 gap-8 md:gap-16 pt-0">
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id='json-ld-website' type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify(jsonLd)}
       </Script>
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id='json-ld-profile' type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify(jsonLdProfile)}
       </Script>
       <section className="flex flex-col gap-8 max-w-[1060px] w-full py-[100px] px-4 md:px-10">
@@ -99,17 +98,25 @@ export default function Home() {
           </div>
         </div>
         <p className="text-xl text-foreground/40 max-w-[680px]">
-          Danish Nasarudin is a Full-Stack Web Developer, based in Malaysia.{" "}
-          Sole developer at{" "}
+          Danish Nasarudin is a Full-Stack Software Engineer, based in Malaysia.{" "}
+          He was the sole engineer at{" "}
           <Link
             href={"https://idealtech.com.my/"}
             target="_blank"
-            className="underline underline-offset-4  transition-all duration-500 decoration-foreground/30 mobilehover:hover:decoration-foreground/60"
+            className="underline underline-offset-4 transition-all duration-500 decoration-foreground/30 mobilehover:hover:decoration-foreground/60"
           >
             Ideal Tech PC
           </Link>
-          , his work touches the important parts of the company{"'"}s operation
+           {" "}that covered the company{"'"}s operation
           both for consumer and internal staff.
+        </p>
+        <p className="text-xl text-foreground/40 max-w-[680px]">He is now specialising in Front-End Mobile Engineering at <Link
+            href={"https://www.rytbank.my/"}
+            target="_blank"
+            className="underline underline-offset-4 transition-all duration-500 decoration-foreground/30 mobilehover:hover:decoration-foreground/60"
+          >
+            Ryt Bank
+          </Link>{" "} as part of the Payment Team.
         </p>
       </section>
       <ContentSection className="max-w-[1060px] w-full flex flex-col gap-4 md:gap-8 px-4 md:px-10" />
@@ -122,7 +129,7 @@ export default function Home() {
           </div>
         </div>
         <p className="text-xl text-foreground/40 max-w-[700px]">
-          Although using the latest tech is a benefit to a developer, sticking
+          Although using the latest tech is a benefit to an engineer, sticking
           to certain stacks greatly improves the understanding towards each
           tech. In return, provide shortest solutions to commonly solved
           problems.
@@ -138,7 +145,7 @@ export default function Home() {
           </div>
         </div>
         <p className="text-xl text-zinc-400 max-w-[700px]">
-          If you{`'`}re looking to hire a developer with additional skillset
+          If you{`'`}re looking to hire an engineer with additional skillset
           outside of tech (Project Manager, Creative Lead), please do reach out.
         </p>
       </section>

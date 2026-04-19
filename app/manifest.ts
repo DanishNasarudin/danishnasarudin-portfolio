@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Danish Nasarudin",
     short_name: "Danish Nasarudin",
-    description: "A Portfolio by Danish Nasarudin. Full-Stack Web Developer.",
+    description: "A Portfolio by Danish Nasarudin. Full-Stack Software Engineer.",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",
