@@ -8,9 +8,6 @@ const nextConfig: NextConfig = {
       static: 300, // 300 seconds
     },
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   headers: async () => [
     {
       source: "/:path*",
